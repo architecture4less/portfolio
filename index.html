@@ -1,114 +1,169 @@
+<!--
+AUTH: Jared O'Toole
+DATE: Saturday, February 23rd, 2019
+PROJ: Student Portfolio Webpage
+FILE: index.html
+
+https://architecture4less.github.io/portfolio/index.html
+-->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <title>Student Portfolio | Jared O'Toole</title>
   <link href="index.css" type="text/css" rel="stylesheet">
+  <script src="./jquery-3.3.1.min.js" type="text/javascript"></script>
+  <script src="./index.js" type="text/javascript"></script>
 </head>
+
 <body>
-
+<main>
   <div id="banner">
-    <img src="./myself.png" alt="An image of myself"></img>
-    <div class="info">
-      <h1>My Student Portfolio (WIP) <span>Jared O'Toole</span></h1>
+    <img src="./images/myself.png" alt="an image of myself" style="width: 128px; height: auto;" />
+    <div>
+      <h1>My Student Portfolio <span>Jared Wyland O'Toole</span></h1>
+      
       <!-- links to at least 2 profiles (GitHub, LinkedIn, Codecademy, Hackerrank) -->
-      <div id="contact">
-        GitHub | LinkedIn | StackOverflow | Codecademy | Hackerrank
-      </div>
+      <nav id="contact">
+          <a href="https://github.com/architecture4less">GitHub</a> 
+        | <a href="https://www.linkedin.com/in/jared-o-toole-551a38180/">LinkedIn</a>
+        | <a href="https://www.codecademy.com/Architecture4less">Codecademy</a> 
+      </nav>
     </div>
   </div>
   
+  <br />
   <hr />
   
-  <!-- "About Me" section (2-3 paragraphs) -->
-  <div id="about-me">
-    <h2>About Me</h2>
-    <div class="column-group">
-      <p class="column">
-        My name is Jared. I'm an undergraduate student at Florida Gulf Coast University, studying to become a software engineer. I take great interest in Machine Learning, and I'm planning for a career where I can build new tools to solve complex problems. My dream job is to utilize my passions for the scientific research of diseases.
+  <div class="block-1">
+    <nav class="tab-nav">
+      <h2 class="button about-me selected">About Me</h2>
+    </nav>
+    
+    <!-- "About Me" section (2-3 paragraphs) -->
+    <section id="about-me" class="tab active">
+    
+      <p class="column top">
+        My name is Jared. I'm an undergraduate student at Florida Gulf Coast University, studying to become a software engineer. I take great interest in Machine Learning, and I'm planning for a career where I can build new tools to solve complex problems. My dream job is to utilize my passions for the scientific research of diseases and cures.
       </p>
-      <p class="column">
-        In my free time, I like to follow video-game programming tutorials off of the internet, create my own algorithms for various mathematical problems I run into, and design expansive plugins for games such as Minecraft. I am eager for opportunities to improve my thinking process when I tackle these projects, as I'm hopeful this skill may transfer into my future career.
+      <p class="column top">
+        In my free time, I like to follow video-game programming tutorials off of the internet, try my hand at creating algorithms for various mathematical problems I run into, and design expansive plugins for sandbox games such as Minecraft. I am always eager for opportunities to improve my thinking process when I tackle these projects.
       </p>
-      <p class="column">
-        Sometimes, I also like to draw or build cities, sci-fi ships, or space colonies  in sandbox games. I have a lot of experience working with other people from around the world on building projects and plugin design projects related to these games. I absolutely love collaborating with others while working individually.
+      <p class="column top">
+        Sometimes, I also like to draw or build cities, sci-fi ships, and space colonies  in sandbox games. I have a lot of experience working with other people from around the world on building projects and plugin design projects related to these games. I absolutely love collaborating with others, while working individually.
       </p>
-    </div>
+    </section>
+    <br />
+    <hr />
   </div>
   
-  <hr />
-  
-  <!-- "Education Experience" (list of courses taken) -->
-  <div id="education">
-    <h2>Education Experience</h2>
-    <p>
-      I graduated from Gateway Charter High School. I am receiving my Associates in Arts from Florida SouthWestern University this semester, Spring 2019. I am also currently enrolled in Florida Gulf Coast University working towards a Bachelors in Software Engineering.
-    </p>
-    <p>
-      Here are some of the classes I've taken so far:
-    </p>
-    <ul>
-      <li>
-        Intro to Computer Science <br />
-        <sup>COP 1500 &ndash; Florida Gulf Coast University &ndash; Spring 2019</sup>
-      </li>
-      <li>
-        Internet Programming II <br />
-        <sup>COP 2830 &ndash; Florida SouthWestern University &ndash; Spring 2017</sup>
-      </li>
-      <li>
-        Internet Programming I <br />
-        <sup>COP 1822 &ndash; Florida SouthWestern University &ndash; Fall 2016</sup>
-      </li>
-      <li>
-        Java Programming <br />
-        <sup>COP 2800 &ndash; Florida SouthWestern University &ndash; Summer 2016</sup<>
-      </li>      
-      <li>
-        Computer Programming I (with C++) <br />
-        <sup>GEE 1003 &ndash; Florida Polytechnic University &ndash; Spring 2016</sup>
-      </li>
-      <li>
-        Intro to Computer Programming (with Python) <br />
-        <sup>GEE 1003 &ndash; Florida Polytechnic University &ndash; Fall 2015</sup>
-      </li>
-    </ul>
-  </div>
+  <div class="block-2">
+    <nav class="tab-nav">
+        <h2 class="button education selected">Education Experience</h2>
+      | <h2 class="button work-samples">Work Samples</h2>
+      | <h2 class="button achievements">Top Accomplishments</h2>
+    </nav>
+    
+    <!-- "Education Experience" (list of courses taken) -->
+    <section id="education" class="tab active">
+    
+      <p>
+        I graduated from Gateway Charter High School. I am receiving my Associates in Arts from Florida SouthWestern University this semester, Spring 2019. I am also currently enrolled in Florida Gulf Coast University working towards a Bachelors in Software Engineering.
+      </p>
+      <p>
+        Here are some of the classes I've taken so far:
+      </p>
+      <ul>
+        <li>
+          Intro to Computer Science <br />
+          <sup>COP 1500 &ndash; Florida Gulf Coast University &ndash; Spring 2019</sup>
+        </li>
+        <li>
+          Internet Programming II <br />
+          <sup>COP 2830 &ndash; Florida SouthWestern University &ndash; Spring 2017</sup>
+        </li>
+        <li>
+          Internet Programming I <br />
+          <sup>COP 1822 &ndash; Florida SouthWestern University &ndash; Fall 2016</sup>
+        </li>
+        <li>
+          Java Programming <br />
+          <sup>COP 2800 &ndash; Florida SouthWestern University &ndash; Summer 2016</sup<>
+        </li>      
+        <li>
+          Computer Programming I (with C++) <br />
+          <sup>GEE 1003 &ndash; Florida Polytechnic University &ndash; Spring 2016</sup>
+        </li>
+        <li>
+          Intro to Computer Programming (with Python) <br />
+          <sup>GEE 1003 &ndash; Florida Polytechnic University &ndash; Fall 2015</sup>
+        </li>
+      </ul>
+    </section>
 
-  <!-- "Work Samples" -->
-  <div id="work-samples">
-    <h2>Work Samples</h2>
-    <p>
-      Here are some of the projects I've done for my classes:
-    </p>
-    <ul>
-      <li>
-        Intro to Computer Science Scratch Project
-      </li>
-      <li>
-        Internet Programming Final Project
-      </li>
-      <li>
-        Java Programming Final Project
-      </li>
-    </ul>
+    <!-- "Work Samples" -->
+    <section id="work-samples" class="tab">
+    
+      <p>
+        Here are some of the projects I've done for my classes:
+      </p>
+      <ul>
+        <li>
+          <h4>Intro to Computer Science: Scratch Project</h4>
+          <p>
+            You can find it <a href="<img src="#" alt="image of dungeon" />here</a>
+          </p>
+          <p>
+            A simple dungeon-explorer game made on scratch.mit.edu for my Intro to Computer Science class. It features randomly generated floors (with stairs and treasure chests), as well as a simple battle system for when you encounter enemies.
+          </p>
+          <p>
+            This project gave me the chance to work in a limited programming environment and devise clever solutions to bring my idea to life.
+          </p>
+          <img src="./images/dungeon-explorer-level.png" alt="an image of a dungeon game level" style="width: 128px; height: auto;" />
+          <img src="./images/dungeon-explorer-battle.png" alt="an image of a dungeon game battle" style="width: 128px; height: auto;" />
+          <img src="./images/mit-scratch-code-editor.png" alt="an image of a dungeon game battle" style="width: 256px; height: auto;" />
+        </li>
+        <!--
+        <li>
+          Internet Programming: Final Project
+          <sub><a href="#">Link</a></sub>
+          <p>
+            
+          </p>
+        </li>
+        <li>
+          Java Programming: Final Project
+          <sub><a href="#">Link</a></sub>
+          <p>
+            
+          </p>
+        </li>
+        -->
+      </ul>
+    </section>
+    
+    <!-- "Top Accomplishments" -->
+    <section id="achievements" class="tab">
+    
+      <p>
+        Here are some of my achievements:
+      </p>
+      <ul>
+        <li>
+          Graduated high school with Summa Cum Laude.
+        </li>
+        <li>
+          Scored in the 1700's and 1800's for math and reading on the SATs, which awarded me the Bright Future's scholarship.
+        </li>
+        <li>
+          In high school, I joined cross country and improved my 5K time from 45:00 min to 20:15 min.
+        </li>
+      </ul>
+    </section>
+    <br />
+    <hr />
   </div>
   
-  <!-- "Top Accomplishments" -->
-  <div id="accomplishments">
-    <h2>Top Accomplishments</h2>
-    <ul>
-      <li>
-        Graduated high school with Summa Cum Laude.
-      </li>
-      <li>
-        Scored in the 1700's and 1800's for math and reading on the SATs, which awarded me the Bright Future's scholarship.
-      </li>
-      <li>
-        In high school, I joined cross country and lowered my 5K time from 45:00 min to 20:15 min.
-      </li>
-    </p>
-  </div>
-  
+</main>
 </body>
 </html>

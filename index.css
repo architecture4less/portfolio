@@ -1,5 +1,54 @@
+/*
+AUTH: Jared O'Toole
+DATE: Saturday, February 23rd, 2019
+PROJ: Student Portfolio Webpage
+FILE: index.css
+*/
+
 body {
-    
+    background-color: black;
+    min-height: 2048px;
+}
+
+main {
+    border: 4px groove white;
+    border-radius: 12px;
+    background-color: white;
+    padding: 8px;
+    margin: auto auto;
+    max-width: 832px;
+}
+
+img {
+    display: inline-block;
+    border: 2px dotted darkgray;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+section {
+    padding: 0px 24px;
+}
+
+h2 {
+    padding: 0px 8px;
+    margin: 12px auto;
+}
+
+h4 {
+    margin: 0;
+}
+
+li {
+    margin: 8px auto;
+}
+
+li sup {
+    color: hsl(0, 0%, 35%);
+}
+
+#banner {
+    min-width: 768px;
 }
 
 #banner h1 span {
@@ -8,27 +57,52 @@ body {
     margin: auto 8px;
 }
 
-#banner img {
-    display: inline-block;
-    width: 128px;
-    height: auto;
-    border: 2px dotted darkgray;
-    border-radius: 8px;
-    padding: 4px;
-}
-
-#banner div.info {
+#banner div {
     display: inline-block;
     margin: auto 12px;
     vertical-align: top;
 }
 
-.column-group {
-    
+.button {
+    display: inline-block;
+    cursor: pointer;
+    color: hsl(0, 0%, 35%);
 }
 
-.column {
-    display: inline-block;
-    width: 250px;
+.button.selected {
+    color: black;
+}
+
+.button:hover {
+    color: teal;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+section p:first-child {
+    margin-top: 0px;
+}
+
+section#about-me {
+    max-width: 768px;
+    column-width: 14em;
     vertical-align: top;
+}
+
+section#work-samples ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+section#work-samples ul li {
+    border: 2px inset darkgray;
+    padding: 8px;
+    margin: 4px auto;
+    column-width: 16em;
 }
