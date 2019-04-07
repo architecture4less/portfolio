@@ -21,7 +21,20 @@ https://architecture4less.github.io/portfolio/index.html
   <div id="banner">
     <img src="./res/myself.png" alt="an image of myself" style="width: 128px; height: auto;" />
     <div>
-      <h1>My Student Portfolio <span>Jared Wyland O'Toole</span></h1>
+      <h1>
+        <svg width="300" height="40">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(200,240,220);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgb(210,230,190);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="50" cy="25" rx="250" ry="20" fill="url(#gradient)" />
+          <text fill="black" font-size="30" font-family="Serif" x="15" y="25">My Student Portfolio</text>
+        Sorry, your browser does not support inline SVG.
+        </svg> 
+        <span>Jared Wyland O'Toole</span>
+      </h1>
       
       <!-- links to at least 2 profiles (GitHub, LinkedIn, Codecademy, Hackerrank) -->
       <nav id="contact">
@@ -40,6 +53,7 @@ https://architecture4less.github.io/portfolio/index.html
     <nav class="tab-nav">
         <h2 class="button about-me selected">About Me</h2>
       | <h2 class="button fields-report">Fields Report</h2>
+      | <h2 class="button javascript">JavaScript</h2>
     </nav>
     
     <!-- "About Me" section (2-3 paragraphs) -->
@@ -55,8 +69,26 @@ https://architecture4less.github.io/portfolio/index.html
         Sometimes, I also like to draw or build cities, sci-fi ships, and space colonies  in sandbox games. I have a lot of experience working with other people from around the world on building projects and plugin design projects related to these games. I absolutely love collaborating with others, while working individually.
       </p>
     </section>
+    
+    <!-- JavaScript section (canvas & svg elements) -->
+    <section id="javascript" class="tab">
+      <p>
+        Here are some JavaScript programs I'd like to share:
+      </p>
+      <ul class="divided">
+        <li>
+            <p>
+              This is a WIP JavaScript painting app that I am currently working on.
+            </p>
+            <canvas id="painter" width="600" height="250">
+              Canvas
+            </canvas>
+        </li>
+      </ul>
+    </section>
+    
+    <!-- Fields Report section (pdf element) -->
     <section id="fields-report" class="tab">
-      <!--<a href="./res/fields_report.pdf">Fields Report</a>--> 
       <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://architecture4less.github.io/portfolio/res/fields_report.pdf" width="600" height="325">
     </section>
     <br />
@@ -114,7 +146,7 @@ https://architecture4less.github.io/portfolio/index.html
       <p>
         Here are some of the projects I've done for my classes:
       </p>
-      <ul>
+      <ul class="divided">
         <li>
           <div class="wider">
             <h4>Intro to Computer Science: Scratch Project</h4>
@@ -132,17 +164,17 @@ https://architecture4less.github.io/portfolio/index.html
             <img src="./res/mit-scratch-code-editor.png" alt="an image of a dungeon game battle" style="width: 256px; height: auto;" />
           </div>
           <div class="wider">
-            A demonstration of the game:
-            <br /><br />
+            <p>
+              A demonstration of the game:
+            </p>
             <video width="320" height="240" controls>
               <source src="./res/dungeon_explorer_demo.mp4" type="video/mp4">
               <source src="./res/dungeon_explorer_demo.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
-            <br/>
-            <br/>
-            One of the sound effects I made for this project using bfxr.net and Audacity:
-            <br/><br />
+            <p>
+              One of the sound effects I made for this project using bfxr.net and Audacity:
+            </p>
             <audio controls>
               <source src="./res/ascend.mp3" type="audio/mpeg">
               <source src="./res/ascend.ogg" type="audio/ogg">

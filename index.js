@@ -23,4 +23,6 @@ $(document).ready(function() {
         $(".block-2 .tab-nav .button").removeClass("selected");
         $(this).addClass("selected");
     });
+    
+
 });

@@ -19,11 +19,15 @@ main {
     max-width: 832px;
 }
 
-img, audio {
+img, audio, canvas {
     display: inline-block;
     border: 2px dotted darkgray;
     border-radius: 8px;
     padding: 4px;
+}
+
+canvas {
+    cursor: pointer;
 }
 
 section {
@@ -95,7 +99,7 @@ section#about-me {
     vertical-align: top;
 }
 
-section#work-samples ul {
+ul.divided {
     list-style-type: none;
     padding-left: 0;
     border: 2px inset darkgray;
@@ -103,6 +107,10 @@ section#work-samples ul {
     margin: 4px auto;
 }
 
-section#work-samples ul li div.wider {
+div.wider {
     column-width: 16em;
+}
+
+canvas#painter {
+    
 }
