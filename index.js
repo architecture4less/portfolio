@@ -2,7 +2,7 @@
 AUTH: Jared O'Toole
 DATE: Saturday, February 23rd, 2019
 PROJ: Student Portfolio Webpage
-FILE: index.css
+FILE: index.js
 */
 $(document).ready(function() {
     

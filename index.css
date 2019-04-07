@@ -19,7 +19,7 @@ main {
     max-width: 832px;
 }
 
-img {
+img, audio {
     display: inline-block;
     border: 2px dotted darkgray;
     border-radius: 8px;
@@ -98,11 +98,11 @@ section#about-me {
 section#work-samples ul {
     list-style-type: none;
     padding-left: 0;
-}
-
-section#work-samples ul li {
     border: 2px inset darkgray;
     padding: 8px;
     margin: 4px auto;
+}
+
+section#work-samples ul li div.wider {
     column-width: 16em;
 }

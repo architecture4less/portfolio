@@ -19,7 +19,7 @@ https://architecture4less.github.io/portfolio/index.html
 <body>
 <main>
   <div id="banner">
-    <img src="./images/myself.png" alt="an image of myself" style="width: 128px; height: auto;" />
+    <img src="./res/myself.png" alt="an image of myself" style="width: 128px; height: auto;" />
     <div>
       <h1>My Student Portfolio <span>Jared Wyland O'Toole</span></h1>
       
@@ -27,7 +27,8 @@ https://architecture4less.github.io/portfolio/index.html
       <nav id="contact">
           <a target="_blank" href="https://github.com/architecture4less">GitHub</a> 
         | <a target="_blank" href="https://www.linkedin.com/in/jared-o-toole-551a38180/">LinkedIn</a>
-        | <a target="_blank" href="https://www.codecademy.com/Architecture4less">Codecademy</a> 
+        | <a target="_blank" href="https://www.codecademy.com/Architecture4less">Codecademy</a>
+        | <a target="_blank" href="https://www.hackerrank.com/jo39toole?hr_r=1">Hackerrank</a>
       </nav>
     </div>
   </div>
@@ -37,7 +38,8 @@ https://architecture4less.github.io/portfolio/index.html
   
   <div class="block-1">
     <nav class="tab-nav">
-      <h2 class="button about-me selected">About Me</h2>
+        <h2 class="button about-me selected">About Me</h2>
+      | <h2 class="button fields-report">Fields Report</h2>
     </nav>
     
     <!-- "About Me" section (2-3 paragraphs) -->
@@ -53,9 +55,14 @@ https://architecture4less.github.io/portfolio/index.html
         Sometimes, I also like to draw or build cities, sci-fi ships, and space colonies  in sandbox games. I have a lot of experience working with other people from around the world on building projects and plugin design projects related to these games. I absolutely love collaborating with others, while working individually.
       </p>
     </section>
+    <section id="fields-report" class="tab">
+      <!--<a href="./res/fields_report.pdf">Fields Report</a>--> 
+      <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://architecture4less.github.io/portfolio/res/fields_report.pdf" width="600" height="325">
+    </section>
     <br />
     <hr />
   </div>
+  
   
   <div class="block-2">
     <nav class="tab-nav">
@@ -109,19 +116,39 @@ https://architecture4less.github.io/portfolio/index.html
       </p>
       <ul>
         <li>
-          <h4>Intro to Computer Science: Scratch Project</h4>
-          <p>
-            You can find it <a target="_blank" href="https://scratch.mit.edu/projects/281821605/" />here</a>
-          </p>
-          <p>
-            A simple dungeon-explorer game made on scratch.mit.edu for my Intro to Computer Science class. It features randomly generated floors (with stairs and treasure chests), as well as a simple battle system for when you encounter enemies.
-          </p>
-          <p>
-            This project gave me the chance to work in a limited programming environment and devise clever solutions to bring my idea to life.
-          </p>
-          <img src="./images/dungeon-explorer-level.png" alt="an image of a dungeon game level" style="width: 128px; height: auto;" />
-          <img src="./images/dungeon-explorer-battle.png" alt="an image of a dungeon game battle" style="width: 128px; height: auto;" />
-          <img src="./images/mit-scratch-code-editor.png" alt="an image of a dungeon game battle" style="width: 256px; height: auto;" />
+          <div class="wider">
+            <h4>Intro to Computer Science: Scratch Project</h4>
+            <p>
+              You can find it <a target="_blank" href="https://scratch.mit.edu/projects/281821605/" />here</a>
+            </p>
+            <p>
+              A simple dungeon-explorer game made on scratch.mit.edu for my Intro to Computer Science class. It features randomly generated floors (with stairs and treasure chests), as well as a simple battle system for when you encounter enemies.
+            </p>
+            <p>
+              This project gave me the chance to work in a limited programming environment and devise clever solutions to bring my idea to life.
+            </p>
+            <img src="./res/dungeon-explorer-level.png" alt="an image of a dungeon game level" style="width: 128px; height: auto;" />
+            <img src="./res/dungeon-explorer-battle.png" alt="an image of a dungeon game battle" style="width: 128px; height: auto;" />
+            <img src="./res/mit-scratch-code-editor.png" alt="an image of a dungeon game battle" style="width: 256px; height: auto;" />
+          </div>
+          <div class="wider">
+            A demonstration of the game:
+            <br /><br />
+            <video width="320" height="240" controls>
+              <source src="./res/dungeon_explorer_demo.mp4" type="video/mp4">
+              <source src="./res/dungeon_explorer_demo.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <br/>
+            <br/>
+            One of the sound effects I made for this project using bfxr.net and Audacity:
+            <br/><br />
+            <audio controls>
+              <source src="./res/ascend.mp3" type="audio/mpeg">
+              <source src="./res/ascend.ogg" type="audio/ogg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </li>
         <!--
         <li>
