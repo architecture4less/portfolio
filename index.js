@@ -12,12 +12,21 @@ $(document).ready(function() {
     // make the tab-navs visible.
     $(".tab-block .tab-nav").show();
     
-    // add functionality to the tab-nav buttons
-    $(".tab-block .tab-nav .button").click(function() {
+    // add functionality to the block-1 tab-nav buttons
+    $("#block-1 .tab-nav .button").click(function() {
         var id = $(this).attr("class").split(/\s+/)[1];
-        $(".tab-block .tab").removeClass("active");
-        $(".tab-block #" + id + ".tab").addClass("active");
-        $(".tab-block .tab-nav .button").removeClass("selected");
+        $("#tab-block .tab").removeClass("active");
+        $("#tab-block #" + id + ".tab").addClass("active");
+        $("#tab-block .tab-nav .button").removeClass("selected");
+        $(this).addClass("selected");
+    });
+    
+    // add functionality to the block-2 tab-nav buttons
+    $("#block-2 .tab-nav .button").click(function() {
+        var id = $(this).attr("class").split(/\s+/)[1];
+        $("#block-2 .tab").removeClass("active");
+        $("#block-2 #" + id + ".tab").addClass("active");
+        $("#block-2 .tab-nav .button").removeClass("selected");
         $(this).addClass("selected");
     });
 });
