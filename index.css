@@ -45,9 +45,28 @@ p:first-child {
     margin-top: 0px;
 }
 
+p.code {
+    font-family: monospace;
+    padding: 4px;
+    padding-left: 1.5em;
+    background-color: hsl(0, 0%, 90%);
+    border: 2px dotted lightgray;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: scroll;
+}
+
 /* MEDIA STYLES */
 
-img, audio, .video, .form, .canvas {
+img, audio, .video, .form, .outline {
     display: inline-block;
     border: 2px dotted darkgray;
     border-radius: 8px;
