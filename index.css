@@ -5,9 +5,11 @@ PROJ: Student Portfolio Webpage
 FILE: index.css
 */
 
+/* PAGE STYLES */ 
+
 body {
     background-color: black;
-    min-height: 2048px;
+    -min-height: 2048px;
 }
 
 main {
@@ -19,7 +21,33 @@ main {
     max-width: 832px;
 }
 
-img, audio, canvas {
+section {
+    padding: 0px 24px;
+}
+
+section#about-me, section#accessibility {
+    max-width: 768px;
+    column-width: 14em;
+    vertical-align: top;
+}
+
+div.columnized {
+    column-width: 16em;
+}
+
+/* MISC STYLES */
+
+sup {
+    color: hsl(0, 0%, 35%);
+}
+
+p:first-child {
+    margin-top: 0px;
+}
+
+/* MEDIA STYLES */
+
+img, audio, .video, .form, .canvas {
     display: inline-block;
     border: 2px dotted darkgray;
     border-radius: 8px;
@@ -27,12 +55,12 @@ img, audio, canvas {
 }
 
 canvas {
-    cursor: pointer;
+    margin: 8px;
+    border: 1px solid darkgray;
+    border-radius: 8px;
 }
 
-section {
-    padding: 0px 24px;
-}
+/* HEADER STYLES */
 
 h2 {
     padding: 0px 8px;
@@ -41,21 +69,44 @@ h2 {
 
 h4 {
     margin: 0;
+    margin-bottom: 12px;
+    font-size: 1.15em;
 }
+
+h3.dummy {
+    display: none;
+}
+
+/* LIST STYLES */
 
 li {
     margin: 8px auto;
 }
 
-li sup {
-    color: hsl(0, 0%, 35%);
+ul.divided {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 4px auto;
 }
 
+ul.divided li {
+    border: 2px inset darkgray;
+    padding: 8px;
+}
+
+/* BANNER STYLES */
+
 #banner {
-    min-width: 768px;
+    -min-width: 768px;
+    -background-color: hsl(210, 15%, 92%);
+}
+
+#banner h1 {
+    display: inline-block;
 }
 
 #banner h1 span {
+    display: inline-block;
     font-size: 80%;
     color: hsl(0, 0%, 25%);
     margin: auto 8px;
@@ -66,6 +117,13 @@ li sup {
     margin: auto 12px;
     vertical-align: top;
 }
+
+#banner nav {
+    background-color: hsl(210, 10%, 90%);
+    padding: 8px 4px;
+}
+
+/* BUTTON STYLES */
 
 .button {
     display: inline-block;
@@ -81,36 +139,12 @@ li sup {
     color: teal;
 }
 
+/* TOGGLE TAB STYLES */
+
 .tab {
     display: none;
 }
 
 .tab.active {
     display: block;
-}
-
-section p:first-child {
-    margin-top: 0px;
-}
-
-section#about-me {
-    max-width: 768px;
-    column-width: 14em;
-    vertical-align: top;
-}
-
-ul.divided {
-    list-style-type: none;
-    padding-left: 0;
-    border: 2px inset darkgray;
-    padding: 8px;
-    margin: 4px auto;
-}
-
-div.wider {
-    column-width: 16em;
-}
-
-canvas#painter {
-    
 }

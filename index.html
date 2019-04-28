@@ -12,16 +12,21 @@ https://architecture4less.github.io/portfolio/index.html
   <meta charset="UTF-8">
   <title>Student Portfolio | Jared O'Toole</title>
   <link href="index.css" type="text/css" rel="stylesheet">
-  <script src="./jquery-3.3.1.min.js" type="text/javascript"></script>
-  <script src="./index.js" type="text/javascript"></script>
-  <script src="./painter.js" type="text/javascript"></script>
+  <script src="./jquery-3.3.1.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="./js/ceasar_cipher.js"></script>
+  <script src="./js/painter.js"></script>
 </head>
 
 <body>
 <main>
+
   <div id="banner">
+  
     <img src="./res/myself.png" alt="an image of myself" style="width: 128px; height: auto;" />
+    
     <div>
+      <!-- student portfolio header with SVG element & name -->
       <h1>
         <svg width="300" height="40">
           <defs>
@@ -30,14 +35,15 @@ https://architecture4less.github.io/portfolio/index.html
               <stop offset="100%" style="stop-color:rgb(210,230,190);stop-opacity:1" />
             </linearGradient>
           </defs>
+          
           <ellipse cx="50" cy="25" rx="250" ry="20" fill="url(#gradient)" />
           <text fill="black" font-size="30" font-family="Serif" x="15" y="25">My Student Portfolio</text>
-        Sorry, your browser does not support inline SVG.
-        </svg> 
+        </svg>
+        
         <span>Jared Wyland O'Toole</span>
       </h1>
       
-      <!-- links to at least 2 profiles (GitHub, LinkedIn, Codecademy, Hackerrank) -->
+      <!-- links to other profiles (GitHub, LinkedIn, Codecademy, Hackerrank, etc) -->
       <nav id="contact">
           <a target="_blank" href="https://github.com/architecture4less">GitHub</a> 
         | <a target="_blank" href="https://www.linkedin.com/in/jared-o-toole-551a38180/">LinkedIn</a>
@@ -45,68 +51,79 @@ https://architecture4less.github.io/portfolio/index.html
         | <a target="_blank" href="https://www.hackerrank.com/jo39toole?hr_r=1">Hackerrank</a>
       </nav>
     </div>
+    
   </div>
   
   <br />
   <hr />
   
-  <div class="block-1">
-    <nav class="tab-nav">
+  <!-- top content bar -->
+  <div class="tab-block">
+    <nav class="tab-nav" style="display: none;">
         <h2 class="button about-me selected">About Me</h2>
       | <h2 class="button fields-report">Fields Report</h2>
-      | <h2 class="button javascript">JavaScript</h2>
+      | <h2 class="button accessibility">Page Usability</h2>
     </nav>
     
-    <!-- "About Me" section (2-3 paragraphs) -->
-    <section id="about-me" class="tab active">
     
-      <p class="column top">
+    <!-- "About Me" section -->
+    <section id="about-me" class="tab active">
+      <h3 class="dummy">About Me</h3>
+    
+      <p>
         My name is Jared. I'm an undergraduate student at Florida Gulf Coast University, studying to become a software engineer. I take great interest in Machine Learning, and I'm planning for a career where I can build new tools to solve complex problems. My dream job is to utilize my passions for the scientific research of diseases and cures.
       </p>
-      <p class="column top">
+      <p>
         In my free time, I like to follow video-game programming tutorials off of the internet, try my hand at creating algorithms for various mathematical problems I run into, and design expansive plugins for sandbox games such as Minecraft. I am always eager for opportunities to improve my thinking process when I tackle these projects.
       </p>
-      <p class="column top">
+      <p>
         Sometimes, I also like to draw or build cities, sci-fi ships, and space colonies  in sandbox games. I have a lot of experience working with other people from around the world on building projects and plugin design projects related to these games. I absolutely love collaborating with others, while working individually.
       </p>
     </section>
     
-    <!-- JavaScript section (canvas & svg elements) -->
-    <section id="javascript" class="tab">
-      <p>
-        Here are some of my JavaScript programs I'd like to share:
-      </p>
-      <ul class="divided">
-        <li>
-            <p>
-              This is a JavaScript painting app that I am currently working on.
-            </p>
-            <canvas id="painter" width="600" height="250">
-              Canvas
-            </canvas>
-        </li>
-      </ul>
+    
+    <!-- "Fields Report (PDF)" section -->
+    <section id="fields-report" class="tab">
+      <h3 class="dummy">Fields Report</h3>
+    
+      <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://architecture4less.github.io/portfolio/res/fields_report.pdf" width="600" height="325" alt="Sorry, your browser does not support the google drive PDF viewer">
     </section>
     
-    <!-- Fields Report section (pdf element) -->
-    <section id="fields-report" class="tab">
-      <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://architecture4less.github.io/portfolio/res/fields_report.pdf" width="600" height="325">
+    
+    <!-- "Accessibility / Usability" section -->
+    <section id="accessibility" class="tab">
+      <h3 class="dummy">Page Usability</h3>
+      
+      <p>
+        This webpage was designed for usability and accessibility using the <a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">Web Content Accessibility Guidelines</a>: I strive to make my site perceivable, operable, understandable, and robust. Images and other media elements have descriptive alternative text or captions. Video and audio files utilize multiple formats. The content is readable without its stylesheet. The content also adjusts dynamically to the browser width.
+      </p>
+      <p>
+        This webpage has no style or contrast errors from the <a target="_blank" href="http://wave.webaim.org/report#/https://architecture4less.github.io/portfolio/index.html">WAVE Web Accessibility Tool</a>, and it was designed using <a target="_blank" href="https://www.usability.gov/what-and-why/visual-design.html">Visual Design Basics</a>: lines and shapes are used to divide and define content areas, and fonts are chosen appropriately. There is a heirarchy from the page header to its subordinate content. Content is also equally distributed, or balanced, vertically down the page.
+      </p>
+      <p>
+        <a target="_blank" href="http://www.w3.org/html/logo/">
+          <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+        </a>
+      </p>
     </section>
+    
     <br />
     <hr />
   </div>
   
-  
-  <div class="block-2">
-    <nav class="tab-nav">
+  <!-- bottom content bar -->
+  <div class="tab-block">
+    <nav class="tab-nav" style="display: none;">
         <h2 class="button education selected">Education Experience</h2>
       | <h2 class="button work-samples">Work Samples</h2>
-      | <h2 class="button achievements">Top Accomplishments</h2>
+      | <h2 class="button achievements">Accomplishments</h2>
     </nav>
     
-    <!-- "Education Experience" (list of courses taken) -->
-    <section id="education" class="tab active">
     
+    <!-- "Education Experience" section -->
+    <section id="education" class="tab active">
+      <h3 class="dummy">Education Experience</h3>
+      
       <p>
         I graduated from Gateway Charter High School. I am receiving my Associates in Arts from Florida SouthWestern University this semester, Spring 2019. I am also currently enrolled in Florida Gulf Coast University working towards a Bachelors in Software Engineering.
       </p>
@@ -128,7 +145,7 @@ https://architecture4less.github.io/portfolio/index.html
         </li>
         <li>
           Java Programming <br />
-          <sup>COP 2800 &ndash; Florida SouthWestern University &ndash; Summer 2016</sup<>
+          <sup>COP 2800 &ndash; Florida SouthWestern University &ndash; Summer 2016</sup>
         </li>      
         <li>
           Computer Programming I (with C++) <br />
@@ -141,18 +158,55 @@ https://architecture4less.github.io/portfolio/index.html
       </ul>
     </section>
 
-    <!-- "Work Samples" -->
+
+    <!-- "Work Samples" section -->
     <section id="work-samples" class="tab">
-    
+      <h3 class="dummy">Work Samples</h3>
+      
       <p>
         Here are some of the projects I've done for my classes:
       </p>
+      
       <ul class="divided">
+        
+        
+        <!-- "Javascript Caeser Cipher" showcase -->
         <li>
-          <div class="wider">
-            <h4>Intro to Computer Science: Scratch Project</h4>
+          <h4>Javascript Ceaser Cipher</h4>
+          <div class="columnized">
             <p>
-              You can find it <a target="_blank" href="https://scratch.mit.edu/projects/281821605/" />here</a>
+              Here is a simple Javascript program I made that encrypts given text using the Ceasar Cipher, where letters are replaced with another that is three places to the left in the alphabet. The shift amount can be changed in this case.
+            </p>
+            
+            <table class="form">
+              <tr>
+                <td><label for="cipher-shift">Cipher Shift:</label></td>
+                <td>
+                  <input type="number" id="cipher-shift" min="-25" max="25" value="-3" />
+                  <button onclick="encryptCipherText()">Encrypt</button>
+                  <button onclick="switchCipherText()">Switch Text</button>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="cipher-input">Input Text:</label></td>
+                <td><input type="text" id="cipher-input" style="width: 100%;" value="Hello World!" /></td>
+              </tr>
+              <tr>
+                <td><label for="cipher-output">Cipher Output:</label></td>
+                <td><input type="text" id="cipher-output" style="width: 100%;" /></td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        
+        
+        <!-- "Scratch Project" showcase -->
+        <li>
+          <h4>Intro to Computer Science: Scratch Project</h4>
+          
+          <div class="columnized">
+            <p>
+              You can find it here: <a target="_blank" href="https://scratch.mit.edu/projects/281821605/">Scratch Project</a>
             </p>
             <p>
               A simple dungeon-explorer game made on scratch.mit.edu for my Intro to Computer Science class. It features randomly generated floors (with stairs and treasure chests), as well as a simple battle system for when you encounter enemies.
@@ -160,51 +214,65 @@ https://architecture4less.github.io/portfolio/index.html
             <p>
               This project gave me the chance to work in a limited programming environment and devise clever solutions to bring my idea to life.
             </p>
-            <img src="./res/dungeon-explorer-level.png" alt="an image of a dungeon game level" style="width: 128px; height: auto;" />
-            <img src="./res/dungeon-explorer-battle.png" alt="an image of a dungeon game battle" style="width: 128px; height: auto;" />
-            <img src="./res/mit-scratch-code-editor.png" alt="an image of a dungeon game battle" style="width: 256px; height: auto;" />
-          </div>
-          <div class="wider">
+            
+            <img src="./res/dungeon-explorer-level.png" alt="an image of level from my dungeon game" style="width: 128px; height: auto;" />
+            <img src="./res/dungeon-explorer-battle.png" alt="an image of battle from my dungeon game" style="width: 128px; height: auto;" />
+            <img src="./res/mit-scratch-code-editor.png" alt="an image of my project in the scratch code editor" style="width: 256px; height: auto;" />
+            
             <p>
-              A demonstration of the game:
+              A video demonstration of the game:
             </p>
-            <video width="320" height="240" controls>
-              <source src="./res/dungeon_explorer_demo.mp4" type="video/mp4">
-              <source src="./res/dungeon_explorer_demo.webm" type="video/webm">
-              Your browser does not support the video tag.
-            </video>
+            <div class="video">
+              <video width="320" height="240" controls>
+                <source src="./res/dungeon_explorer_demo.mp4" type="video/mp4">
+                <source src="./res/dungeon_explorer_demo.webm" type="video/webm">
+                Your browser does not support this video element.
+              </video>
+            </div>
             <p>
               One of the sound effects I made for this project using bfxr.net and Audacity:
             </p>
             <audio controls>
               <source src="./res/ascend.mp3" type="audio/mpeg">
               <source src="./res/ascend.ogg" type="audio/ogg">
-              Your browser does not support the audio element.
+              Your browser does not support this audio element.
             </audio>
           </div>
         </li>
-        <!--
+        
+        
+        <!-- "IPO Javascript Program" showcase -->
         <li>
-          Internet Programming: Final Project
-          <sub><a href="#">Link</a></sub>
-          <p>
-            
-          </p>
+          <h4>Javascript Program utilizing IPO</h4>
+          <div class="columnized">
+            <p>
+              This is a Javascript painter I made, utilizing input-process-output. When you click or drag the mouse on the canvas (input), the program determines how that has changed the canvas (process), and finally it redraws the canvas to show any changes (output).
+            </p>
+            <p>
+              It is based on this tutorial here: <a target="_blank" href="http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/">Create a Drawing App with HTML5 Canvas and Javascript</a>
+            </p>
+            <div class="canvas" style="text-align: center;">
+              <button onclick="setCursor('#000000', 5)">Black</button>
+              <button onclick="setCursor('#ff0000', 5)">Red</button>
+              <button onclick="setCursor('#0000ff', 5)">Blue</button>
+              <button onclick="setCursor('#00ff00', 5)">Green</button>
+              <button onclick="setCursor('#ffffff', 10)">Eraser</button>
+              <canvas id="painter" width="302" height="152">
+                Your browser does not support this canvas element.
+              </canvas>
+              <button onclick="clearCanvas()">Clear All</button>
+            </div>
+          </div>
         </li>
-        <li>
-          Java Programming: Final Project
-          <sub><a href="#">Link</a></sub>
-          <p>
-            
-          </p>
-        </li>
-        -->
+
       </ul>
     </section>
     
-    <!-- "Top Accomplishments" -->
-    <section id="achievements" class="tab">
     
+    <!-- "Top Accomplishments" section -->
+    <section id="achievements" class="tab">
+      <h3 class="dummy">Accomplishments</h3>
+      
       <p>
         Here are some of my achievements:
       </p>
